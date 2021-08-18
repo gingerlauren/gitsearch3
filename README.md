@@ -2,9 +2,7 @@
 
 ### Description
 
----
-
-Git Lens is a web app that uses the GitHub API. It allows you to search any GitHub profile and view the details of that profile such as, the repos, the stars and forks each repo has, the day it was created and many more.    ccccccccvvvvvvvvvvvggggg
+Git Lens is a web app that uses the GitHub API. It allows you to search any GitHub profile and view the details of that profile such as, the repos, the stars and forks each repo has, the day it was created and many more.    ccccccccv
 
 ## Technologies Used
 
