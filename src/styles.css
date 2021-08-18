@@ -1,0 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Gupter:400,700|Montserrat&display=swap");
+h1 {
+  font-family: "Gupter";
+  color: darkgreen;
+  font-weight: 400;
+  text-align: center;
+}
+h1 span {
+  font-weight: 700;
+}
+
+input[type="text"] {
+  font-family: "Gupter";
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-family: "Montserrat";
+  color: darkgreen;
+}
+
+.logo {
+  margin: 1.5rem;
+}
+
+.search {
+  margin-top: 1.5rem;
+}
+.fas-star,
+.fas-code-branch {
+  width: 10px;
+  height: 10px;
+  color: #fff;
+}
+.repos {
+  text-transform: uppercase;
+  font-family: "Gupter";
+  color: deeppink;
+  margin-top: 10px;
+}
+
+.repo_tittle {
+  font-family: "Montserrat";
+  color: darkgreen;
+  padding: 10px;
+  border-bottom: 1px solid darkgreen;
+}
+
+.description {
+  text-align: left;
+}
+.view_repo {
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 5px;
+}
+.view_repo:hover {
+  text-decoration: none;
+}
+
+hr {
+  border: 1px solid darkgreen;
+}
+.date {
+  font-size: 0.7rem;
+  color: darkblue;
+}

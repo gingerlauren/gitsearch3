@@ -1,0 +1,93 @@
+<div class="container">
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-md-4">
+      <h1><i class="fab fa-searchengin logo"></i>GitHub <span>Lens</span></h1>
+    </div>
+    <div class="col-md-8 search">
+      <div class="form">
+        <form action="">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter GitHub Username"
+              [(ngModel)]="username"
+              (keyup)="findUser()"
+              name="username"
+            />
+          </div>
+          <small>
+            <p>
+              <em
+                >Enter a GitHub username and let us look it up for you. It's as
+                simple as that :)</em
+              >
+            </p></small
+          >
+        </form>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div *ngIf="profile">
+    <div class="row">
+      <div class="coulumn-md-4">
+        <div class="profile-pic" class="profile">
+          <img
+            src="{{ profile.avatar_url }}"
+            alt="Profic Image"
+            class="img-fluid"
+          />
+          <h3>{{ profile.login }}</h3>
+          <p *ngIf="profile.name">{{ profile.name }}</p>
+          <p>
+            <span class="badge badge-success"
+              >Followers: {{ profile.followers }}</span
+            ><span class="badge badge-info px-3"
+              >Following: {{ profile.following }}</span
+            >
+            <span class="badge badge-primary"
+              >Public Repos:{{ profile.public_repos }}</span
+            >
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h2 class="repo_tittle">REPOSITORIES</h2>
+        <div myHighlight class="repos" *ngFor="let repo of repos">
+          <h3>
+            <div class="flexed d-flex justify-content-between">
+              <!-- <div class="flex-right"> -->
+              <div>
+                <h4 class="repos">{{ repo.name }}</h4>
+                <small
+                  ><p class="date">
+                    Created on: {{ repo.created_at | date }}
+                  </p></small
+                >
+                <a
+                  href="{{ profile.html_url }}"
+                  target="_blank"
+                  class="btn-warning view_repo"
+                  >View Repo</a
+                >
+              </div>
+              <div>
+                <span class="badge badge-warning"
+                  ><i class="fas fa-star"></i>{{ repo.stargazers_count }}</span
+                >&nbsp;
+                <span class="badge badge-danger"
+                  ><i class="fas fa-code-branch"></i>{{ repo.forks }}</span
+                >
+              </div>
+            </div>
+          </h3>
+          <p *ngIf="repo.description" class="description">
+            {{ repo.description }}
+          </p>
+          <hr />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

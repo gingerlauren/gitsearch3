@@ -1,0 +1,32 @@
+/* Landing Page Styles */
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  font-size: 5rem;
+}
+
+.logo-lg {
+  margin-right: 1.5rem;
+}
+
+.btn-success {
+  width: 70%;
+  height: 40px;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+small {
+  font-size: 1rem;
+}
+
+.container-fluid {
+  background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
+    url("../../../assets/background.jpg") no-repeat center center/cover;
+  /* background: red; */
+}
